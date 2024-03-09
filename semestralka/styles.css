@@ -1,0 +1,163 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #444;
+  color: #5c5757;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+header {
+  background-color: #363434;
+  color: #fff;
+  padding: 1em 0 0;
+}
+header h1 {
+  text-align: center;
+}
+footer {
+  background-color: #363434;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #444;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+main {
+  background-color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+section {
+  color:black;
+  flex: 1 1 30%;
+  margin: 10px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.main_image {
+  max-width: 70%;
+  object-fit: cover;
+}
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+}
+
+/* Form css*/
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+textarea{
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  word-wrap: break-word;
+  align-content: start;
+}
+.form-group input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.form-group input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 2em;
+  color: #ccc;
+}
+
+.rating input:checked ~ label {
+  color: gold;
+}
