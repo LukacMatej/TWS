@@ -46,7 +46,6 @@ main {
   background-color: #444;
   display: flex;
   flex-wrap: wrap;
-  
 }
 section {
   color:black;
@@ -56,11 +55,31 @@ section {
   padding: 20px;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 12px;
+}
+tr {
+  background-color: gray;
+  padding: 5px;
+}
+tr:nth-child(even) {
+  background-color: darkgrey;
+}
 .main_image {
   max-width: 70%;
   object-fit: cover;
 }
 .dropbtn {
+  min-width: 100px;
+  text-align: center;
   background-color: #04AA6D;
   color: white;
   padding: 16px;
@@ -111,6 +130,12 @@ section {
 }
 .form-group label {
   display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group legend {
+  display: block;
+  font-size: 20px;
   margin-bottom: 5px;
   font-weight: bold;
 }
