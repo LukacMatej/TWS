@@ -1,13 +1,16 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #444;
+  background-color: #828c51;
   color: #5c5757;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
-  background-color: #363434;
+  background-color: #1e352f;
   color: #fff;
   padding: 1em 0 0;
 }
@@ -15,63 +18,61 @@ header h1 {
   text-align: center;
 }
 footer {
-  background-color: #363434;
+  background-color: #1e352f;
   color: #fff;
   text-align: center;
   padding: 1em 0;
+  margin-top: auto;
 }
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #444;
+  background-color: #335145;
 }
-
 nav ul li {
   display: inline;
 }
-
 nav ul li a {
   display: block;
   color: #fff;
   text-decoration: none;
   padding: 1em;
 }
-
 nav ul li a:hover {
   background-color: #666;
 }
-
 main {
-  background-color: #444;
+  background-color: #828c51;
   display: flex;
   flex-wrap: wrap;
 }
-section {
+section, table {
   color:black;
   flex: 1 1 30%;
   margin: 10px;
-  background-color: #f0f0f0;
+  background-color: #a6c36f;
   padding: 20px;
 }
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+.centered-section {
+  text-align: center;
+  background-color: #a6c36f;
+  padding: 20px 20px;
+  margin: 20px 320px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 td, th {
-  border: 1px solid black;
+  border: 2px solid black;
   text-align: center;
   padding: 12px;
 }
 tr {
-  background-color: gray;
+  background-color: #828c51;
   padding: 5px;
 }
 tr:nth-child(even) {
-  background-color: darkgrey;
+  background-color: #a6c36f;
 }
 .main_image {
   max-width: 70%;
@@ -110,22 +111,47 @@ tr:nth-child(even) {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-@media (max-width: 768px) {
-  main {
-      flex-direction: column;
+ /*Any Mobile Device*/
+ @media only screen and (min-width: 767px) {
+  .centered-section {
+    padding: 20px 20px;
+    margin: 20px 80px;
   }
 }
-
+ /*Tablets Device*/
+@media only screen and (min-width: 991px) {
+  .centered-section {
+    padding: 20px 20px;
+    margin: 20px 160px;
+  }
+ }
+ /*ipad Pro  Device*/
+@media only screen and (min-width: 1024px) {
+  .centered-section {
+    padding: 20px 20px;
+    margin: 20px 240px;
+  }
+ }
+ /*large  Device*/
+@media only screen and (min-width: 1200px) {
+  .centered-section {
+    padding: 20px 20px;
+    margin: 20px 300px;
+  }
+  
+ }
 /* Form css*/
 .container {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  color: 	black;
+  background-color: 	#a6c36f;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-group {
+  width: 400px;
   margin-bottom: 20px;
 }
 .form-group label {
