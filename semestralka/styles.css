@@ -27,6 +27,9 @@ footer {
 footer,header {
   background-image: linear-gradient(180deg, rgba(0,91,39,1) 0%, rgba(0,116,66,1) 50%, rgba(0,91,39,1) 100%);
 }
+footer a {
+  color :white;
+}
 ul{
   list-style-type:none;
 }
@@ -49,7 +52,6 @@ nav ul li a:hover {
   background-color: #666;
 }
 main {
-  background-color: #828c51;
   display: flex;
   flex-wrap: wrap;
 }
@@ -59,6 +61,8 @@ section, table {
   margin: 10px;
   background-color: #a6c36f;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .centered-section {
   text-align: center;
@@ -151,13 +155,14 @@ tr:nth-child(even) {
 .container {
   max-width: 400px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 20px 50px 20px 20px;
   color: 	black;
   background-color: 	#a6c36f;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-group {
+  border: none;
   width: 400px;
   margin-bottom: 20px;
 }
@@ -168,7 +173,7 @@ tr:nth-child(even) {
 }
 .form-group legend {
   display: block;
-  font-size: 20px;
+  font-size: 26px;
   margin-bottom: 5px;
   font-weight: bold;
 }
