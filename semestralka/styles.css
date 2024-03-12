@@ -1,34 +1,50 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: linear-gradient(180deg, rgba(130,140,81,1) 0%, rgba(182,196,110,1) 50%, rgba(130,140,81,1) 100%);;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: green;
   color: #5c5757;
   margin: 0;
   padding: 0;
   min-height: calc(100vh - 70px);
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
-header {
-  background-color: #1e352f;
-  color: #fff;
-  padding: 1em 0 0;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+header{
+  position: sticky; 
+  top: 0;
+  background-color: black;
+  color: white;
+  text-shadow: black;
+  background-size: cover;
+  font-size: 16px;
 }
 header h1 {
   text-align: center;
 }
 footer {
-  background-color: #1e352f;
+  background-color: rgb(74, 153, 74);
   color: #fff;
   text-align: center;
   padding: 1em 0;
   margin-top: auto;
 }
-footer,header {
-  background-image: linear-gradient(180deg, rgba(0,91,39,1) 0%, rgba(0,116,66,1) 50%, rgba(0,91,39,1) 100%);
+.background_image img{
+  width: 100%;
 }
-footer a {
-  color :white;
+a:link{
+  color: white;
+  text-decoration: underline;
+}
+a:visited{
+  color: #a8a8a8;
+} 
+a:link:hover, a:visited:hover {
+  color: darkgreen;
+  font-weight: bold;
 }
 ul{
   list-style-type:none;
@@ -51,26 +67,33 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #666;
 }
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
 section, table {
   color:black;
-  flex: 1 1 30%;
-  margin: 10px;
-  background-color: #a6c36f;
+  flex: 1 1 100%;
+  font-size: 20px;
+  margin: 20px 400px 20px 400px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.centered-section {
+/*dodělat table size*/
+section image{
+  max-width: 70%;
+  margin: 10px; 
+}
+section p,li{
+  margin: 20px 150px 10px 150px;
+  text-align: justify;
+}
+section h2,h3{
   text-align: center;
-  background-color: #a6c36f;
-  padding: 20px 20px;
-  margin: 20px 320px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+section,table li{
+  text-align: justify;
 }
 td, th {
   border: 2px solid black;
@@ -85,8 +108,9 @@ tr:nth-child(even) {
   background-color: #a6c36f;
 }
 .main_image {
-  max-width: 70%;
-  object-fit: cover;
+  height: 16em;
+  width: auto;
+  display: inline-block;
 }
 .dropbtn {
   min-width: 100px;
@@ -120,38 +144,63 @@ tr:nth-child(even) {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
-@media only screen and (max-width: 1200px) {
-  .centered-section {
-    padding: 20px 20px;
-    margin: 20px 300px;
+@media(max-width: 1800px) {
+  section, table {
+    padding: 20px;
+    margin: 20px 100px;
   }
- }
-@media only screen and (max-width: 1024px) {
-  .centered-section {
-    padding: 20px 20px;
-    margin: 20px 240px;
+  section p, li {
+    margin: 20px 50px 10px;
   }
- }
-@media only screen and (max-width: 991px) {
-  .centered-section {
-    padding: 20px 20px;
-    margin: 20px 160px;
-  }
- }
- /*Any Mobile Device*/
- @media only screen and (max-width: 767px) {
-  .centered-section {
-    padding: 20px 20px;
-    margin: 20px 20px;
+  .main_image{
+    height: 24em;
   }
 }
- /*Tablets Device*/
 
- /*ipad Pro  Device*/
+@media(max-width: 1400px) {
+  section, table {
+    padding: 20px;
+    margin: 20px 80px;
+  }
+  section p, li {
+    margin: 20px 40px 10px;
+  }
+  .main_image{
+    height: 16em;
+  }
+}
 
- /*large  Device*/
+@media(max-width: 1024px) {
+  section, table {
+    padding: 20px;
+    margin: 20px 60px;
+  }
+  section p, li {
+    margin: 20px 30px 10px;
+  }
+  .main_image{
+    height: 16em;
+  }
+}
 
-/* Form css*/
+@media(max-width: 991px) {
+  section, table {
+    padding: 20px;
+    margin: 20px 40px;
+  }
+  section p, li {
+    margin: 20px 20px 10px;
+  }
+}
+@media(max-width: 767px) {
+  section, table {
+    padding: 20px;
+    margin: 20px;
+  }
+  section p, li {
+    margin: 20px 10px 10px;
+  }
+}
 .container {
   max-width: 400px;
   margin: 20px auto;
