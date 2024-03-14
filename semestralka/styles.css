@@ -1,12 +1,12 @@
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-image: green;
   color: #5c5757;
   margin: 0;
   padding: 0;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh);
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 main {
   display: flex;
@@ -18,12 +18,21 @@ header{
   top: 0;
   background-color: black;
   color: white;
-  text-shadow: black;
   background-size: cover;
   font-size: 16px;
+  display:flex;
+  justify-content: space-between;
 }
 header h1 {
   text-align: center;
+  padding-left: 20px;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+header .dropdown {
+  text-align: center;
+  
 }
 footer {
   background-color: rgb(74, 153, 74);
@@ -31,6 +40,10 @@ footer {
   text-align: center;
   padding: 1em 0;
   margin-top: auto;
+}
+.logo{
+  max-width: 75px;
+  position: sticky;
 }
 .background_image img{
   width: 100%;
@@ -46,7 +59,7 @@ a:link:hover, a:visited:hover {
   color: darkgreen;
   font-weight: bold;
 }
-ul{
+.centered-section ul{
   list-style-type:none;
 }
 nav ul {
@@ -67,7 +80,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #666;
 }
-section, table {
+section {
   color:black;
   flex: 1 1 100%;
   font-size: 20px;
@@ -80,7 +93,19 @@ section, table {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*dodělat table size*/
+table {
+  color:black;
+  font-size: 20px;
+  margin: 20px 400px 20px 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  display: table-header-group;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 section image{
   max-width: 70%;
   margin: 10px; 
@@ -95,17 +120,19 @@ section h2,h3{
 section,table li{
   text-align: justify;
 }
+
 td, th {
-  border: 2px solid black;
+  border: 1px solid black;
   text-align: center;
   padding: 12px;
 }
 tr {
-  background-color: #828c51;
+  width: inherit;
+  background-color: #c0daba;
   padding: 5px;
 }
-tr:nth-child(even) {
-  background-color: #a6c36f;
+thead tr {
+  background-color: rgb(101, 179, 101);;
 }
 .main_image {
   height: 16em;
@@ -113,23 +140,22 @@ tr:nth-child(even) {
   display: inline-block;
 }
 .dropbtn {
-  min-width: 100px;
+  width: 150px;
   text-align: center;
-  background-color: #04AA6D;
+  background-color: #242424;
   color: white;
-  padding: 16px;
+  padding: 31px;
   font-size: 16px;
   border: none;
 }
 .dropdown {
-  position: relative;
   display: inline-block;
 }
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  max-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -144,6 +170,7 @@ tr:nth-child(even) {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 @media(max-width: 1800px) {
   section, table {
     padding: 20px;
@@ -206,14 +233,20 @@ tr:nth-child(even) {
   margin: 20px auto;
   padding: 20px 50px 20px 20px;
   color: 	black;
-  background-color: 	#a6c36f;
+  background-color: 	#c0daba;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-group {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
   border: none;
   width: 400px;
   margin-bottom: 20px;
+}
+.form-group > *{
+  margin-bottom: 25px;
 }
 .form-group label {
   display: block;
@@ -267,9 +300,63 @@ textarea{
 .rating label {
   cursor: pointer;
   font-size: 2em;
-  color: #ccc;
+  color: #757575;
 }
 
 .rating input:checked ~ label {
   color: gold;
+}
+.modalButton{
+  padding: 20px;
+  color: black;
+  background-color: #bacfc1;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #e6f0e9;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; 
+  border-radius: 14px;
+}
+.modal-content-text{
+  display: flex;
+  flex-direction: column;
+}
+.modal-content ol {
+  list-style-type: decimal;
+  padding-left: 10%;
+}
+.modal-content ul {
+  list-style-type: circle;
+  padding-left: 10%;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

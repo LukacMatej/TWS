@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img alt="logo" id="logo" class="logo" src="images/logo.svg">
         <h1>House of spiders</h1>
         <div class="dropdown">
             <button class="dropbtn">Home</button>
@@ -22,7 +23,7 @@
           </div>
     </header>
     <div class="background_image">
-        <img src="images/jungle.png">
+        <img alt="background_image" src="images/jungle.png">
     </div>
     <main>
         <section class="centered-section">
@@ -37,14 +38,35 @@
                 <li>Join us on a journey of discovery as we unravel the mysteries of the arachnid world. Whether you're here to learn, explore, or simply appreciate the beauty of spiders, House of Spiders has something for everyone.</li>
                 <li>So grab your magnifying glass, sharpen your curiosity, and step into the enchanting realm of spiders with House of Spiders!</li>
             </ul>
-            <h3>More info</h3>
-            <p></p>
+            <button id="myBtn" class="modalButton">More info</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-content-text">
+                        <h3>Get in touch</h3>
+                        <ol>
+                            <li>Have a question, feedback, or inquiry? We'd love to hear from you! Fill out the form below, and one of our friendly team members will get back to you as soon as possible.</li>
+                            <li>If you prefer to contact us directly, you can reach us via email at info@houseofspiders.com or give us a call at 123-456-7890. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM.</li>
+                            <li>Feel free to drop by our office at 123 Spider Street, Webville, Arachnia. We're always happy to welcome visitors!</li>
+                            <li>Whether you're a spider enthusiast, a curious learner, or simply want to chat, we're here to assist you. Reach out to us today!</li>
+                        </ol>
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>If you have any questions, feedback, or inquiries, feel free to reach out to us!</li>
+                            <li>Email: info@houseofspiders.com</li>
+                            <li>Phone: 123-456-7890</li>
+                            <li>Address: 123 Spider Street, Webville, Arachnia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 House of spiders </p>
-        <p><a target="_blank" href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fsemestralka%2Findex.html">Validator</a></p>
-        <p><a target="_blank" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fsemestralka%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs">CSS Validator</a></p>
-    </footer>
+        <p><a target="_blank" href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fhouse_of_spiders%2Findex.html">Validator</a></p>
+        <p><a target="_blank" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fhouse_of_spiders%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs">CSS Validator</a></p>
+        <a target="_blank" href="https://achecks.org/achecker#wcag2aa,http://stuwrk.nti.tul.cz/~matej.lukac/house_of_spiders/"><img src="https://achecks.org/images/icon_W2_aa.jpg" alt="AChecker accessibility checker compliance: WCAG 2.0 (Level AA)" height="32" width="102" /></a>    </footer>
 </body>
+<script src="script.js"></script>
 </html>

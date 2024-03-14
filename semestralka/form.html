@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img alt="logo" id="logo" class="logo" src="images/logo.svg">
         <h1>House of spiders</h1>
         <div class="dropdown">
             <button class="dropbtn">Form</button>
@@ -23,23 +24,16 @@
     </header>
     
       <div class="container">
-        <fieldset class="form-group">
-            <legend >Give us a feedback</legend>
-        </fieldset>
         <form action="#" method="post">
             <fieldset class="form-group">
+                <legend >Give us a feedback</legend>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-            </fieldset>
-            <fieldset class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-            </fieldset>
-            <fieldset class="form-group">
                 <label for="text">Message:</label>
                 <textarea id="text" rows="10"></textarea>
-            </fieldset>
-            <div class="rating">
+                <div class="rating">
                 <input type="radio" id="star5" name="rating" value="5">
                 <label for="star5">&#9733;</label>
                 <input type="radio" id="star4" name="rating" value="4">
@@ -50,15 +44,15 @@
                 <label for="star2">&#9733;</label>
                 <input type="radio" id="star1" name="rating" value="1">
                 <label for="star1">&#9733;</label>
-            </div>
-            <fieldset class="form-group">
+                </div>
                 <input type="submit" value="Submit">
             </fieldset>
         </form>
     </div>
     <footer>
         <p>&copy; 2024 House of spiders</p>
-        <p><a target="_blank" href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fsemestralka%2Fform.html">Validator</a></p>
+        <p><a target="_blank" href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.lukac%2Fhouse_of_spiders%2Fform.html">Validator</a></p>
+        <a target="_blank" href="https://achecks.org/achecker#wcag2aa,http://stuwrk.nti.tul.cz/~matej.lukac/house_of_spiders/form.html"><img src="https://achecks.org/images/icon_W2_aa.jpg" alt="AChecker accessibility checker compliance: WCAG 2.0 (Level AA)" height="32" width="102" /></a>
     </footer>
 </body>
 </html>
